@@ -1,7 +1,11 @@
 pipeline {
     // agent any
     agent {label ' aws-ecs' }
-
+    
+    triggers {
+        pollSCM('') // Enabling being build on Push
+     }
+    
     stages {
         // Build General Dependencies
         stage ( ' Dependencies ' ) {
