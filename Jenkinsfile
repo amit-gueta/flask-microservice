@@ -6,11 +6,11 @@ pipeline {
         // Build General Dependencies
         stage ( ' Dependencies ' ) {
             steps {
-                sh " apt-get install -y "
-                sh " apt install python3-pip "
+                sh " apt-get update -y "
+                sh " apt-get install -y python3-pip "
                 sh " pip3 --version "
-                sh " pwd"
-                sh "ls"
+                sh " pwd "
+                sh " ls "
             }
         }
 
